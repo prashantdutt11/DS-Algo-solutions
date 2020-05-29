@@ -46,7 +46,7 @@ long long solve(vector<int> &arr,int i,int j)
     long long answer = LLONG_MAX;
     for(int k=i;k<=j;k++)
     {
-        long long temp = (long long)arr[j+1] + (long long)arr[i-1] + (long long)solve(arr,i,k-1) + (long long)solve(arr,k+1,j);
+        long long temp = (long long)arr[j+1] - (long long)arr[i-1] + (long long)solve(arr,i,k-1) + (long long)solve(arr,k+1,j);
         if(answer>temp)
         {
             answer = temp;
